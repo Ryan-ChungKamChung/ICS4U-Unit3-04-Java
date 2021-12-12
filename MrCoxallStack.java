@@ -52,13 +52,13 @@ public class MrCoxallStack<T> {
         if (stackAsArray.size() == 0) {
             throw new EmptyStackException();
         } else {
-            return stackAsArray.get(0);
+            return this.stackAsArray.get(0);
         }
     }
 
     /** Clears the stack. */
     public void clear() {
-        stackAsArray.clear();
+        this.stackAsArray.clear();
     }
 
     /** Prints out the stack. */
