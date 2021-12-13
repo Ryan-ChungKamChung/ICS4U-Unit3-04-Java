@@ -32,7 +32,7 @@ final class StackExample {
 
         final MrCoxallStack<Integer> aStack = new MrCoxallStack<Integer>();
         final String[] allowedCommands =
-            {"push", "pull", "show", "peek", "clear", "exit"};
+            {"push", "pop", "show", "peek", "clear", "exit"};
         final Scanner scanner = new Scanner(System.in);
 
         final String userCommand;
@@ -47,7 +47,7 @@ final class StackExample {
         final int indexFive = 5;
 
         System.out.println("Acceptable Commands:\n"
-                + "push <number> - pull - show - peek - clear - exit");
+                + "push <number> - pop - show - peek - clear - exit");
 
         while (true) {
             try {
@@ -59,7 +59,7 @@ final class StackExample {
                     userCommandArray = scanner.nextLine().split(" ");
                     aStack.push(Integer.parseInt(userCommandArray[indexOne]));
                 } else if (userInput.startsWith(allowedCommands[indexOne])) {
-                    System.out.println("Removed: " + aStack.pull());
+                    System.out.println("Removed: " + aStack.pop());
                 } else if (userInput.startsWith(allowedCommands[indexTwo])) {
                     aStack.showStack();
                 } else if (userInput.startsWith(allowedCommands[indexThree])) {
